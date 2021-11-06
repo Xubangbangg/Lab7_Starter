@@ -235,9 +235,9 @@ function bindPopstate() {
 
 
   window.addEventListener('popstate', e => {
-    console.log(e.state);
+    //console.log(e.state);
     if(e.state == null){
-      router.navigate('home');
+      router.navigate('home',true);
     }
     else{
       router.navigate(e.state.page, true);
