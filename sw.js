@@ -17,6 +17,7 @@ self.addEventListener('install', function (event) {
    * Create a function as outlined above
    */
 
+  // Get code from here: https://developers.google.com/web/fundamentals/primers/service-workers
    event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
@@ -48,6 +49,7 @@ self.addEventListener('fetch', function (event) {
    * TODO - Part 2 Step 4
    * Create a function as outlined above
    */
+  // Get code from here: https://developers.google.com/web/fundamentals/primers/service-workers
    event.respondWith(
     caches.match(event.request)
       .then(function(response) {
